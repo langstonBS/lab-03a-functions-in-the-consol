@@ -7,20 +7,23 @@
  const a = {name: "a", size: "small" , amount: 5};
 
 
- function logOutThings(){
-    console.log('Here are your ' + bateries.length + ' things!!!!!!' );  
+ function logOutThings(array){
+    console.log('Here are your ' + array.length  + ' things!!!!!!' );  
  }
 
  //name of the varable
  const bateries = [aaa, b, c, d, a];
-
+ const amoutNeed = 23; 
  //nuber of items in the varable
- logOutThings();
+ logOutThings(bateries);
+ shopingList(bateries, amoutNeed);
 
 
- for( let i = 0; i < bateries.length; i++){
-       console.log(bateries[i]);
-       if(bateries[i].amount <= 10){
-        console.log("you need to get " + bateries[i].name);
-    }
-}
+ function shopingList(array, a){
+        for( let i = 0; i < array.length; i++){
+            console.log(array[i]);
+            if(array[i].amount <= a ){
+                console.log("you need to get " + array[i].name);
+            }
+        }
+ }
